@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tarefas | Playbook do Tales</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../styles/pages/tarefas.css" />
+  <link rel="stylesheet" href="../styles/layout.css" />
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script src="../js/tabs-tarefas.js" defer></script>
+  <script src="../js/lucide-init.js" defer></script>  <!-- <-- Adicione este -->
+</head>
+<body>
+  <aside>
+    <h2>📘 Playbook</h2>
+    <nav>
+      <a href="/index.html"><i data-lucide="home"></i> Início</a>
+      <a href="/pages/clientes.html"><i data-lucide="users"></i> Clientes</a>
+      <a href="/pages/tarefas.html" class="active"><i data-lucide="list-check"></i> Tarefas</a>
+      <a href="/pages/links.html"><i data-lucide="link"></i> Links Úteis</a>
+    </nav>
+  </aside>
+
+  <main>
+    <section>
+      <h3>Tarefas</h3>
+      <p class="section-desc">Aqui temos uma relação de todas as tarefas diárias que realizei, divididas por áreas, tecnologias e tarefas, com seus respectivos documentos.</p>
+
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="home">Home</button>
+        <button class="tab-btn" data-tab="ecommerce">Ecommerce</button>
+        <button class="tab-btn" data-tab="marketing">Marketing</button>
+        <button class="tab-btn" data-tab="sites">Sites e Dev</button>
+        <button class="tab-btn" data-tab="midia">Mídia</button>
+      </div>
+
+      <div class="tab-content active" id="home">
+        <table>
+          <thead>
+            <tr>
+              <th>Área</th>
+              <th>Plataforma</th>
+              <th>Tarefas Diárias</th>
+              <th>Status</th>
+              <th>Documento</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Ecommerce</td><td>Tray</td><td>Banners, vitrines</td><td><span class="badge diario">Diário</span></td><td><a href="#ecommerce-tray">Docs Tray</a></td></tr>
+            <tr><td>Ecommerce</td><td>Wake</td><td>Banners, promoções, edições html, carrinho abandonado, vitrines</td><td><span class="badge diario">Diário</span></td><td><a href="#ecommerce-wake">Docs Wake</a></td></tr>
+            <tr><td>Marketing</td><td>RD Marketing</td><td>Fluxos</td><td><span class="badge mensal">Mensal</span></td><td><a href="#marketing-rdmkt">RD Marketing</a></td></tr>
+            <tr><td>Marketing</td><td>RD Conversas</td><td>Fluxos, campanhas</td><td><span class="badge semanal">Semanal</span></td><td><a href="#marketing-rdconversas">RD Tallos</a></td></tr>
+            <tr><td>Sites</td><td>Wordpress</td><td>Edições</td><td><span class="badge semanal">Semanal</span></td><td><a href="#sites-wordpress">Wordpress</a></td></tr>
+            <tr><td>Desenvolvimentos</td><td>Python</td><td>Dashboard Streamlit</td><td><span class="badge andamento">Em Andamento</span></td><td><a href="#sites-python">Python</a></td></tr>
+            <tr><td>Mídia</td><td>Meta</td><td>Gerenciamento de users e Parceiros</td><td><span class="badge mensal">Mensal</span></td><td><a href="#midia-meta">Meta</a></td></tr>
+            <tr><td>Mídia</td><td>Google ADS</td><td>Tags de conversão</td><td><span class="badge mensal">Mensal</span></td><td><a href="#midia-ads">Google ADS</a></td></tr>
+            <tr><td>Mídia</td><td>Google GTM</td><td>Tags</td><td><span class="badge mensal">Mensal</span></td><td><a href="#midia-gtm">Google GTM</a></td></tr>
+            <tr><td>Mídia</td><td>Merchant Center</td><td>Produtos</td><td><span class="badge mensal">Mensal</span></td><td><a href="#midia-merchant">Merchant</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tab-content" id="ecommerce">
+        <div class="card-modern" id="ecommerce-tray">
+          <div class="card-header"><i data-lucide="shopping-bag"></i><h4>Tray</h4></div>
+          <p class="description">Banners, vitrines.</p>
+          <a class="cta" href="#">Abrir documento</a>
+        </div>
+        <div class="card-modern" id="ecommerce-wake">
+          <div class="card-header"><i data-lucide="shopping-cart"></i><h4>Wake</h4></div>
+          <p class="description">Banners, promoções, edições HTML, carrinho abandonado, vitrines.</p>
+          <a class="cta" href="#">Abrir documento</a>
+        </div>
+      </div>
+
+      <div class="tab-content" id="marketing">
+        <div class="card-modern" id="marketing-rdmkt">
+          <div class="card-header"><i data-lucide="mail"></i><h4>RD Marketing</h4></div>
+          <p class="description">Fluxos de automação de marketing.</p>
+          <a class="cta" href="#">Abrir documento</a>
+        </div>
+        <div class="card-modern" id="marketing-rdconversas">
+          <div class="card-header"><i data-lucide="message-circle"></i><h4>RD Conversas</h4></div>
+          <p class="description">Campanhas e fluxos no WhatsApp (Tallos).</p>
+          <a class="cta" href="#">Abrir documento</a>
+        </div>
+      </div>
+
+      <div class="tab-content" id="sites">
+        <div class="card-modern" id="sites-wordpress">
+          <div class="card-header"><i data-lucide="globe"></i><h4>WordPress</h4></div>
+          <p class="description">Edições e manutenção do site institucional.</p>
+          <a class="cta" href="#">Abrir documento</a>
+        </div>
+        <div class="card-modern" id="sites-python">
+          <div class="card-header"><i data-lucide="code"></i><h4>Python</h4></div>
+          <p class="description">Dashboard desenvolvido em Streamlit.</p>
+          <a class="cta" href="#">Abrir documento</a>
+        </div>
+      </div>
+
+      <div class="tab-content" id="midia">
+        <div class="card-modern" id="midia-meta">
+          <div class="card-header"><i data-lucide="facebook"></i><h4>Meta</h4></div>
+          <p class="description">Gerenciamento de contas, permissões e parceiros.</p>
+          <a class="cta" href="#">Abrir documento</a>
+        </div>
+        <div class="card-modern" id="midia-ads">
+          <div class="card-header"><i data-lucide="target"></i><h4>Google ADS</h4></div>
+          <p class="description">Configuração de tags de conversão.</p>
+          <a class="cta" href="#">Abrir documento</a>
+        </div>
+        <div class="card-modern" id="midia-gtm">
+          <div class="card-header"><i data-lucide="tag"></i><h4>Google GTM</h4></div>
+          <p class="description">Gerenciamento de tags via Google Tag Manager.</p>
+          <a class="cta" href="#">Abrir documento</a>
+        </div>
+        <div class="card-modern" id="midia-merchant">
+          <div class="card-header"><i data-lucide="box"></i><h4>Merchant Center</h4></div>
+          <p class="description">Gerenciamento de catálogo de produtos.</p>
+          <a class="cta" href="#">Abrir documento</a>
+        </div>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>

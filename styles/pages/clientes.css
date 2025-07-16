@@ -1,0 +1,93 @@
+/* Estilos específicos da página de Clientes */
+
+.section-desc {
+  margin-bottom: 1.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tab-btn {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+.card-modern {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 16px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #222;
+  box-shadow: 0 0 10px #00000033;
+}
+
+.card-modern:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px var(--primary);
+  border-color: var(--primary);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.card-header h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--primary);
+}
+
+.card-header .tag {
+  font-size: 0.75rem;
+  color: var(--text);
+  background: #222;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  margin-top: 0.3rem;
+}
+
+.card-header .tag.inactive {
+  background: #5c5c5c;
+  color: #ccc;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #fff;
+  background: var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.cta:hover {
+  background: var(--secondary);
+}

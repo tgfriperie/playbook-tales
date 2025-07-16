@@ -1,0 +1,177 @@
+:root {
+  --bg: #0d0d0d;
+  --primary: #8e2de2;
+  --secondary: #4a00e0;
+  --card-bg: #1a1a1a;
+  --text: #f0f0f0;
+  --muted: #999;
+  --radius: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  display: flex;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-desc {
+  color: var(--muted);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Layout Grid Global */
+.intro-grid,
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Cartões */
+.card-modern {
+  background: var(--card-bg);
+  border: 1px solid #222;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px #00000033;
+}
+
+.card-modern:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px #8e2de250;
+  border-color: var(--primary);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-header h4 {
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+.card-modern .description {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.card-modern .cta {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #fff;
+  background: var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card-modern .cta:hover {
+  background: var(--secondary);
+}
+
+/* Badges para Status */
+.badge {
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.badge.diario {
+  background-color: #28a745;
+}
+
+.badge.semanal {
+  background-color: #ffc107;
+}
+
+.badge.mensal {
+  background-color: #17a2b8;
+}
+
+.badge.andamento {
+  background-color: #ff5722;
+}
+
+/* Botões de abas */
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tab-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #222;
+  color: var(--text);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* Tabela de tarefas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+thead {
+  background: #111;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+
+th {
+  color: var(--primary);
+}
+
+td a {
+  color: var(--primary);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+td a:hover {
+  color: var(--secondary);
+}
