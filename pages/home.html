@@ -4,15 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Início | Playbook do Tales</title>
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="../styles/main.css" />
   <link rel="stylesheet" href="../styles/layout.css" />
+  <link rel="stylesheet" href="../styles/pages/home.css" />
+
+  <!-- Scripts -->
   <script src="https://unpkg.com/lucide@latest" defer></script>
   <script src="../js/lucide-init.js" defer></script>
   <script src="../js/sidebar.js" defer></script>
 </head>
 <body>
   <aside>
-    <h2>📘 Playbook</h2>
+    <h2>Playbook</h2>
     <nav>
       <a href="/index.html" class="active"><i data-lucide="home"></i> Início</a>
       <a href="/pages/clientes.html"><i data-lucide="users"></i> Clientes</a>
@@ -23,6 +28,15 @@
 
   <main>
     <section>
+
+      <!-- Embed do Canva -->
+      <div class="embed-slide">
+        <iframe loading="lazy"
+          src="https://www.canva.com/design/DAGtWYcGClk/Uqgxzc6WM6ac7dbDB4HVqA/view?embed"
+          allowfullscreen="allowfullscreen" allow="fullscreen">
+        </iframe>
+      </div>
+
       <h3>Bem-vindo ao Playbook do Tales</h3>
       <p class="section-desc">
         Este painel reúne de forma organizada todas as tarefas, documentos, clientes e links úteis que fazem parte da rotina operacional. Use o menu lateral para navegar pelas seções e consultar informações atualizadas.
@@ -34,7 +48,7 @@
             <i data-lucide="users"></i>
             <h4>Clientes</h4>
           </div>
-          <p class="description">Pasta de cada cliente, com acesso rápido aos documentos usados em cada projeto. Clientes ativos e inativos organizados.</p>
+          <p class="description">Pasta de cada cliente, com acesso rápido aos documentos usados em cada projeto.</p>
           <a class="cta" href="/pages/clientes.html">Ver Clientes</a>
         </div>
 
@@ -43,7 +57,7 @@
             <i data-lucide="list-check"></i>
             <h4>Tarefas</h4>
           </div>
-          <p class="description">Todas as tarefas diárias divididas por área e plataforma, com links diretos para os documentos de cada processo.</p>
+          <p class="description">Todas as tarefas diárias divididas por área e plataforma, com links diretos para os documentos.</p>
           <a class="cta" href="/pages/tarefas.html">Ver Tarefas</a>
         </div>
 
