@@ -100,6 +100,11 @@ main {
   }
 }
 
+/* === DESKTOP STYLES (padrão) === */
+.menu-toggle {
+  display: none; /* Oculta o botão de menu no desktop */
+}
+
 /* === MOBILE STYLES === */
 @media (max-width: 768px) {
   aside {
@@ -111,19 +116,21 @@ main {
     width: 250px;
     transition: left 0.3s ease;
     z-index: 1000;
+    transform: translateX(-100%);
   }
 
   aside.open {
-    left: 0;
+    transform: translateX(0);
   }
 
   main {
     margin-left: 0;
     width: 100%;
-    padding-top: 4rem;
+    padding-top: 4rem; /* Compensa o espaço do botão */
   }
 
   .menu-toggle {
+    display: flex;
     position: fixed;
     top: 1rem;
     left: 1rem;
@@ -133,9 +140,10 @@ main {
     padding: 0.5rem 1rem;
     border-radius: 8px;
     z-index: 1100;
-    display: flex;
     align-items: center;
     gap: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
   }
 
   .menu-toggle i {

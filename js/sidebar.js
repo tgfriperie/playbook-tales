@@ -23,3 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+function toggleSidebar() {
+  const sidebar = document.querySelector('aside');
+  sidebar.classList.toggle('open');
+}

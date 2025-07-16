@@ -4,13 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Links Úteis | Playbook do Tales</title>
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="../styles/main.css" />
-  <link rel="stylesheet" href="../styles/pages/links.css" />
   <link rel="stylesheet" href="../styles/layout.css" />
+  <link rel="stylesheet" href="../styles/pages/links.css" />
+
+  <!-- Scripts -->
   <script src="https://unpkg.com/lucide@latest" defer></script>
-  <script src="../js/lucide-init.js" defer></script>  <!-- <-- Adicione este -->
+  <script src="../js/lucide-init.js" defer></script>
+  <script src="../js/sidebar.js" defer></script>
 </head>
 <body>
+
+  <!-- Botão de menu mobile -->
+  <button class="menu-toggle" id="toggleMenu">
+    <i data-lucide="menu"></i> Menu
+  </button>
+
+  <!-- Sidebar -->
   <aside>
     <h2>Playbook</h2>
     <nav>
@@ -21,6 +33,7 @@
     </nav>
   </aside>
 
+  <!-- Conteúdo principal -->
   <main>
     <section>
       <h3>Links Úteis</h3>
@@ -33,7 +46,7 @@
             <h4>Planilha Geral</h4>
           </div>
           <p class="description">Visão consolidada dos clientes, tarefas e documentos.</p>
-          <a href="https://docs.google.com/spreadsheets/d/1uDp3uI4ze-7UocCh1aE3D4lK63eY7-4LXrw22jv75E8/edit?usp=sharing" class="cta">Abrir Planilha</a>
+          <a href="https://docs.google.com/spreadsheets/d/1uDp3uI4ze-7UocCh1aE3D4lK63eY7-4LXrw22jv75E8/edit?usp=sharing" class="cta" target="_blank" rel="noopener">Abrir Planilha</a>
         </div>
 
         <div class="card-modern">
@@ -42,7 +55,7 @@
             <h4>Docs Playbook</h4>
           </div>
           <p class="description">Pasta principal com os documentos do projeto.</p>
-          <a href="https://drive.google.com/drive/folders/1DHG33mFjMwXYIvZ1j9zQzw-6LZ5ocUha?usp=sharing" class="cta">Abrir Pasta</a>
+          <a href="https://drive.google.com/drive/folders/1DHG33mFjMwXYIvZ1j9zQzw-6LZ5ocUha?usp=sharing" class="cta" target="_blank" rel="noopener">Abrir Pasta</a>
         </div>
 
         <div class="card-modern">
@@ -50,8 +63,8 @@
             <i data-lucide="book-open"></i>
             <h4>Base de Conhecimento Kramas</h4>
           </div>
-          <p class="description">Pasta aonde salvei todo meu conhecimento</p>
-          <a href="https://drive.google.com/drive/folders/1OZF_OVPFoGqCE9zMdqi3dQs1ZHsSHgHV?usp=sharing" class="cta">Ver Pasta</a>
+          <p class="description">Pasta aonde salvei todo meu conhecimento.</p>
+          <a href="https://drive.google.com/drive/folders/1OZF_OVPFoGqCE9zMdqi3dQs1ZHsSHgHV?usp=sharing" class="cta" target="_blank" rel="noopener">Ver Pasta</a>
         </div>
 
         <div class="card-modern">
@@ -60,13 +73,10 @@
             <h4>Docs do Projeto</h4>
           </div>
           <p class="description">Estrutura de código, pastas e arquivos do sistema.</p>
-          <a href="#" class="cta">Abrir Documentação</a>
+          <a href="#" class="cta" target="_blank" rel="noopener">Abrir Documentação</a>
         </div>
       </div>
     </section>
   </main>
 </body>
-<button class="menu-toggle" id="toggleMenu">
-  <i data-lucide="menu"></i> Menu
-</button>
 </html>
