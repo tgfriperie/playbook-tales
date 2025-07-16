@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playbook do Tales</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      --bg: #0d0d0d;
+      --primary: #8e2de2;
+      --secondary: #4a00e0;
+      --card-bg: #1a1a1a;
+      --text: #f0f0f0;
+      --muted: #999;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .search-box {
+      max-width: 500px;
+      margin: 1.5rem auto;
+      text-align: center;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: none;
+      background: #222;
+      color: var(--text);
+      font-size: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid #222;
+      border-radius: 16px;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px #00000033;
+      position: relative;
+    }
+
+    .card:hover {
+      border-color: var(--primary);
+      transform: scale(1.03);
+      box-shadow: 0 0 20px #8e2de250;
+    }
+
+    .card h3 {
+      color: var(--primary);
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .card a {
+      color: var(--text);
+      background: var(--primary);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+
+    .card a:hover {
+      background: var(--secondary);
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    section h2 {
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      border-left: 4px solid var(--primary);
+      padding-left: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .icon {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+
+    .clone-button {
+      display: block;
+      margin: 0 auto 2rem;
+      padding: 1rem 2rem;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .clone-button:hover {
+      transform: scale(1.05);
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📘 Playbook de Transição – Tales</h1>
+    <p>Documentação completa com links, tarefas e organização de clientes</p>
+  </header>
+
+  <div class="search-box">
+    <input type="text" id="search" placeholder="🔍 Buscar por cliente ou tarefa...">
+  </div>
+
+  <button class="clone-button" onclick="window.open('https://drive.google.com/drive/folders/SEU_PLAYBOOK_FOLDER_ID', '_blank')">
+    🚀 Clonar este Playbook
+  </button>
+
+  <section>
+    <h2><i data-lucide="folder" class="icon"></i> Pastas dos Clientes</h2>
+    <div class="grid">
+      <div class="card" data-search="dental genial">
+        <h3>Dental Genial</h3>
+        <a href="#">Abrir Pasta</a>
+      </div>
+      <div class="card" data-search="singular implants">
+        <h3>Singular Implants</h3>
+        <a href="#">Abrir Pasta</a>
+      </div>
+      <div class="card" data-search="clientes inativos">
+        <h3>Clientes Inativos</h3>
+        <a href="#">Abrir Pasta</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><i data-lucide="list-todo" class="icon"></i> Tarefas Diárias por Área</h2>
+    <div class="grid">
+      <div class="card" data-search="tray ecommerce banners vitrines">
+        <h3>Ecommerce – Tray</h3>
+        <p>Banners, vitrines</p>
+        <a href="#">Ver Documento</a>
+      </div>
+      <div class="card" data-search="wake ecommerce html promoções">
+        <h3>Ecommerce – Wake</h3>
+        <p>Promoções, html, carrinho abandonado</p>
+        <a href="#">Ver Documento</a>
+      </div>
+      <div class="card" data-search="rd marketing fluxos">
+        <h3>Marketing – RD Mkt</h3>
+        <p>Fluxos</p>
+        <a href="#">Ver Documento</a>
+      </div>
+      <div class="card" data-search="rd conversas campanhas">
+        <h3>Marketing – RD Conversas</h3>
+        <p>Campanhas e Fluxos</p>
+        <a href="#">Ver Documento</a>
+      </div>
+      <div class="card" data-search="wordpress site ediçao">
+        <h3>Sites – Wordpress</h3>
+        <p>Edições</p>
+        <a href="#">Ver Documento</a>
+      </div>
+      <div class="card" data-search="python desenvolvimento streamlit">
+        <h3>Desenvolvimento – Python</h3>
+        <p>Dashboard em Streamlit</p>
+        <a href="#">Ver Documento</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><i data-lucide="link" class="icon"></i> Links Úteis</h2>
+    <div class="grid">
+      <div class="card" data-search="planilha geral">
+        <h3>Planilha Central</h3>
+        <a href="#">Abrir Planilha</a>
+      </div>
+      <div class="card" data-search="docs playbook">
+        <h3>Docs Playbook</h3>
+        <a href="#">Abrir Pasta Docs</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    lucide.createIcons();
+
+    const searchInput = document.getElementById('search');
+    const cards = document.querySelectorAll('.card');
+
+    searchInput.addEventListener('input', () => {
+      const value = searchInput.value.toLowerCase();
+      cards.forEach(card => {
+        card.classList.toggle('hidden', !card.dataset.search.includes(value));
+      });
+    });
+  </script>
+</body>
+</html>
